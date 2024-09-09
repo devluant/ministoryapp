@@ -1,12 +1,12 @@
-import { ReactElement } from "react"
 import "@/assets/styles/globals.css"
+import type { Metadata } from "next"
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Mini-story App",
     description: "A supplement for Effortless English learners",
     keywords: "effortless english, english"
 }
-const Layout = ({ children }: {children: ReactElement}) => {
+export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
     return (
         <html lang="en">
             <body>
@@ -15,5 +15,3 @@ const Layout = ({ children }: {children: ReactElement}) => {
         </html>
     )
 }
-
-export default Layout
