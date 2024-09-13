@@ -10,6 +10,12 @@ export default function RootLayout({ children }: Readonly<{children: React.React
     return (
         <html lang="en">
             <body>
+                <nav>
+                    <ul className="flex justify-between bg-neutral-900 text-neutral-50 p-4">
+                        <li>Home</li>
+                        <li>Courses</li>
+                    </ul>
+                </nav>
                 <div>{ children }</div>
             </body>
         </html>
