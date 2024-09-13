@@ -6,11 +6,19 @@ export const metadata: Metadata = {
     description: "A supplement for Effortless English learners",
     keywords: "effortless english, english"
 }
-export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
+export default function RootLayout({ children, profile }: Readonly<
+    {
+        children: React.ReactNode
+        profile: React.ReactNode
+    }>) {
+
+    const isAdmin = true
+
     return (
         <html lang="en">
             <body>
                 <div>{ children }</div>
+                <div>{ isAdmin && profile }</div>
             </body>
         </html>
     )
