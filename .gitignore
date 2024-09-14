@@ -35,5 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# devluant's untracking files
+# developedByLuan's untracking files
 /premium-docs
+server/migrations/
