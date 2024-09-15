@@ -49,7 +49,7 @@ export default async function PostsPage() {
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button>View Post</Button>
-          <Badge variant="outline">{post.id}</Badge>
+          <Badge variant="secondary">{post.id}</Badge>
         </CardFooter>
       </Card>
     );
