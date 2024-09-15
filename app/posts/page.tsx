@@ -15,7 +15,7 @@ export default async function PostsPage() {
 
   const postElements = posts.map((post) => {
     return (
-      <div key={post.id} className="border mt-4">
+      <div key={post.id} className="border flex flex-col justify-between">
         <p>{post.id}</p>
         <h2>{post.title}</h2>
         <p>{post.body}</p>
@@ -26,7 +26,9 @@ export default async function PostsPage() {
   return (
     <main>
       <h2>Posts</h2>
-      <div>{postElements}</div>
+      <div className="grid grid-cols-3 gap-4 container mx-auto">
+        {postElements}
+      </div>
     </main>
   );
 }
