@@ -27,7 +27,7 @@ export default async function PostsPage() {
   const postElements = posts.map((post) => {
     return (
       <Card key={post.id} className="flex flex-col justify-between">
-        <CardHeader>
+        <CardHeader className="flex flex-row gap-4 items-center">
           <Avatar>
             <AvatarImage
               src="https://github.com/shadcn.png"
