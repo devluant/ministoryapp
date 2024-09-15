@@ -7,6 +7,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+
 type Posts = {
   userId: number;
   id: number;
@@ -26,6 +28,15 @@ export default async function PostsPage() {
     return (
       <Card key={post.id} className="flex flex-col justify-between">
         <CardHeader>
+          <Avatar>
+            <AvatarImage
+              src="https://github.com/shadcn.png"
+              alt="Avatar image"
+            />
+            <AvatarFallback>
+              {post.title.slice(0, 2).toUpperCase()}
+            </AvatarFallback>
+          </Avatar>
           <div>
             <CardTitle>{post.title}</CardTitle>
             <CardDescription>published by {post.userId}</CardDescription>
