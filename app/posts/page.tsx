@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 
 type Posts = {
   userId: number;
@@ -47,7 +48,7 @@ export default async function PostsPage() {
         </CardContent>
         <CardFooter className="flex justify-between">
           <button>View Post</button>
-          <p>{post.id}</p>
+          <Badge variant="outline">{post.id}</Badge>
         </CardFooter>
       </Card>
     );
